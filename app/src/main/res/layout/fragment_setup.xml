@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SetupFragment">
+
+    <EditText
+        android:id="@+id/thresholdInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:hint="Enter threshold level, i.e. 60 (default)"
+        android:inputType="number"
+        android:maxLength="3"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/delayInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter delay in seconds, i.e. 30 (default)"
+        android:inputType="number"
+        android:maxLength="2"
+        android:minHeight="48dp"
+        android:layout_below="@+id/thresholdInput" />
+
+    <EditText
+        android:id="@+id/recordLengthInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter recording length in seconds, i.e. 5 (default)"
+        android:inputType="number"
+        android:maxLength="2"
+        android:minHeight="48dp"
+        android:layout_below="@+id/delayInput"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/average_difference_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="182dp"
+        android:textSize="30sp"
+        android:text="Cal Stats"/>
+
+
+    <Button
+        android:id="@+id/calibrate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/calibrationProgressBar"
+        android:layout_centerHorizontal="true"
+        android:text="Calibrate" />
+
+    <ProgressBar
+        android:id="@+id/calibrationProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/statusTextView"
+        android:visibility="gone"
+        android:indeterminate="true"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:layout_marginBottom="16dp"/>
+
+
+
+</RelativeLayout>
